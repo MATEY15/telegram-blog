@@ -1,6 +1,7 @@
 //= jquery.min.js
 //= jquery.magnific-popup.min.js
 //= jquery.nanoscroller.min.js
+//= resize-element.js
 
 // window.onload = function(){
 //   $("#overlayer").delay(1000).fadeOut("slow");
@@ -72,4 +73,72 @@ var openMobileSidebar = function(){
 		}
 	});
 };
-openMobileSidebar();
+// openMobileSidebar();
+
+var mobilePosts = function(){
+
+	var links = document.querySelectorAll('.category-items');
+	var linksClose = document.querySelectorAll('.close-content');
+
+	linksClose.forEach( function(element, index) {
+		element.addEventListener('click', function(e){
+			this.parentElement.parentElement.classList.remove('open');
+			this.parentElement.parentElement.previousElementSibling.remove('is-active');
+		});
+	});
+
+	for(var i = 0; i<links.length; i++){
+
+			links[i].addEventListener('click', function(e){
+				e.preventDefault();
+
+				if(!this.classList.contains('is-active')) {
+					// links.forEach( function(element, index) {
+					// 	element.classList.remove('is-active');
+					// 	element.nextElementSibling.classList.remove('open');
+					// });
+					this.classList.add('is-active');
+					this.nextElementSibling.classList.add('open');
+				} else {
+					this.classList.remove('is-active');
+					this.nextElementSibling.classList.remove('open');
+				}
+
+			});
+	}
+	
+};
+mobilePosts();
+
+var mobileCloneContent = function(){
+
+	window.addEventListener('resize', function(e) {
+		var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		if(viewportWidth < 992) {
+			console.log('< 992')
+		} else {
+			console.log('> 992')
+		}
+	});
+	
+};
+// mobileCloneContent();
+
+
+var menuHorozontall = function(){
+  var countList = 0
+  $('.mobile-header--bottom').css({'overflow-x':'auto', 'overflow-y':'hidden'});
+  $('.list-folder li').each(function(index){
+    countList += ($(this).outerWidth()*1+24);
+  });
+  $('.list-folder').css({'width':countList+"px"});
+};
+$(window).on('resize', function(){
+  var win = $(this);
+  if (win.width() <= 1023) {
+    menuHorozontall();
+  }
+});
+setTimeout(function() { 
+  menuHorozontall();
+}, 1000);

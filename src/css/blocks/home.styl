@@ -21,13 +21,21 @@
 	// width 100%
 	flex-grow 1
 
+.contents-mobile
+	position relative
+	height 0
+	overflow hidden
+	trn(.2s)
+	&.open
+		height auto
+
 .content-center
-	// padding 12px
 	background: #fff
 	height calc(100vh - 62px)
 	
 	& .nano-content
 		padding 12px
+		padding-bottom 50px
 	
 	&.nano .nano-pane
 		height 98%
@@ -51,3 +59,27 @@
 			margin-left 14px
 		&.align-left
 			margin-right 14px
+
+
+.close-content--wrapper
+	position absolute
+	bottom 0
+	left 0
+	width 100%
+	background: #fff
+	border-bottom 1px solid #54C3F3
+	padding 6px 10px 8px
+	text-align right
+	.close-content
+		position relative
+		color #222
+		font-size 16px
+		text-decoration none
+		
+		svg
+			position relative
+			top 2px
+			fill #222
+			width 16px
+			height 16px
+			transform: rotate(90deg)

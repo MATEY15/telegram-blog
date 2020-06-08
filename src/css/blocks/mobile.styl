@@ -20,14 +20,28 @@
 	.tool-bar
 		display none
 	
+	// .left-sidebar
+	// 	position absolute
+	// 	left -310px
+	// 	opacity 0
+	// 	visibility hidden
+	// 	z-index 1000
+	// 	transition all .15s linear
+	// 	&.is-open
+	// 		left 0
+	// 		opacity 1
+	// 		visibility visible
+
+
+@media screen and (max-width: 639px)
+
+	.contents-mobile
+		max-height 480px
+		.content-center
+			max-width 480px
+
 	.left-sidebar
-		position absolute
-		left -310px
-		opacity 0
-		visibility hidden
-		z-index 1000
-		transition all .15s linear
-		&.is-open
-			left 0
-			opacity 1
-			visibility visible
+		max-width 100%
+	
+	.main-content
+		display none
