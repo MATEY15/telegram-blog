@@ -20,8 +20,8 @@ mixin iconSvg(w, h, wp, id)
 		use(xlink:href="img/icon/sprite.svg#"+id)
 
 
-mixin itemMenu()
-	a(href="#").category-items
+mixin itemMenu(link)
+	a(href=link).category-items
 		.category-item--images
 			img(src="img/post-img.jpg", alt="")
 		.category-item--content
@@ -30,8 +30,8 @@ mixin itemMenu()
 				span.date 05.06.20
 			p Новая версия приложения в Google Play поддерживает опросы, отложенные сообщения и напоминания
 
-mixin itemMenuActive()
-	a(href="#").category-items.is-active
+mixin itemMenuActive(link)
+	a(href=link).category-items.is-active
 		.category-item--images
 			img(src="img/post-img.jpg", alt="")
 		.category-item--content

@@ -20,14 +20,69 @@
 	.tool-bar
 		display none
 	
+	// .left-sidebar
+	// 	position absolute
+	// 	left -310px
+	// 	opacity 0
+	// 	visibility hidden
+	// 	z-index 1000
+	// 	transition all .15s linear
+	// 	&.is-open
+	// 		left 0
+	// 		opacity 1
+	// 		visibility visible
+		
+@media screen and (max-width: 720px)
+
 	.left-sidebar
+		max-width 300px
+
+
+@media screen and (max-width: 639px)
+
+	body
+		overflow hidden
+	
+	.section_main
+		overflow-x hidden
+
+	.name-category,
+	.date-category
+		color: #fff
+	
+	.icon-bell
+		fill #fff
+	
+	#link-back
+		display flex
+		align-items center
+		margin-right 10px
+
+	.header
+		background: #517da2
+
+	.left-sidebar
+		max-width 100%
+	
+	.sidebar-aside
+		display none
+	
+	.main-content
 		position absolute
-		left -310px
+		top 0
+		left 0
+		width 100%
 		opacity 0
 		visibility hidden
-		z-index 1000
-		transition all .15s linear
-		&.is-open
-			left 0
+		trn(.15s)
+		transform translate(70px, 0)
+		
+		&.show-content
 			opacity 1
 			visibility visible
+			transform translate(0px, 0)
+	
+	.content-center
+		height: calc(100vh - 62px)
+	.left-sidebar .nano
+		height: calc(100vh - 75px)

@@ -28,14 +28,14 @@ sidebarScroll.addEventListener("mouseout", function() {
 
 /* AutoHeightFooter */
 
-function heightFooter(){
-  var heightFoot = $('.footer').outerHeight();
-  $('body').css({ 'padding-bottom': heightFoot});
-}
-heightFooter()
-$( window ).resize(function() {
-  heightFooter()
-});
+// function heightFooter(){
+//   var heightFoot = $('.footer').outerHeight();
+//   $('body').css({ 'padding-bottom': heightFoot});
+// }
+// heightFooter()
+// $( window ).resize(function() {
+//   heightFooter()
+// });
 
 /* AutoHeightFooter End */
 
@@ -72,4 +72,25 @@ var openMobileSidebar = function(){
 		}
 	});
 };
-openMobileSidebar();
+// openMobileSidebar();
+
+
+var blogToLinnk = function(){
+	var allLinks = document.querySelectorAll('.nano-content .category-items'),
+			postContent = document.querySelector('.main-content'),
+			linkBack = document.querySelector('#link-back');
+
+	linkBack.addEventListener('click', function(){
+		postContent.classList.remove('show-content')
+	});
+
+	allLinks.forEach(function(item, index){
+		item.addEventListener('click', function(e){
+			e.preventDefault();
+			console.log(this.getAttribute('href'));
+			postContent.classList.add('show-content');
+		});
+	});
+
+};
+blogToLinnk();

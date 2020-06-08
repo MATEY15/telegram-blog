@@ -4,30 +4,51 @@ block variabl
 	- var title = "Blog"
 
 block header
-	.mobile-header
-		.mobile-header--top
-			.mobile-header--top-left
-				a(href="#").burger-menu#mobile-burger
-					span
-					span
-					span
-				a(href="#").name-page Name Blog
-			a(href="#").search
-				+iconSvg('447', '447', '0 0 447 447', 'icon-search')
-		.mobile-header--bottom
-			ul.list-folder
-				li.is-active
-					a(href="#") Все #[span 1]
-				li
-					a(href="") Folder #[span 7]
-				li
-					a(href="") Folder #[span 6]
-				li
-					a(href="") Folder
+	//- .mobile-header
+	//- 	.mobile-header--top
+	//- 		.mobile-header--top-left
+	//- 			a(href="#").burger-menu#mobile-burger
+	//- 				span
+	//- 				span
+	//- 				span
+	//- 			a(href="#").name-page Name Blog
+	//- 		a(href="#").search
+	//- 			+iconSvg('447', '447', '0 0 447 447', 'icon-search')
+	//- 	.mobile-header--bottom
+	//- 		ul.list-folder
+	//- 			li.is-active
+	//- 				a(href="#") Все #[span 1]
+	//- 			li
+	//- 				a(href="") Folder #[span 7]
+	//- 			li
+	//- 				a(href="") Folder #[span 6]
+	//- 			li
+	//- 				a(href="") Folder
 
 
 block main
 	main.section_main
+
+		.mobile-header
+			.mobile-header--top
+				.mobile-header--top-left
+					a(href="#").burger-menu#mobile-burger
+						span
+						span
+						span
+					a(href="#").name-page Name Blog
+				a(href="#").search
+					+iconSvg('447', '447', '0 0 447 447', 'icon-search')
+			.mobile-header--bottom
+				ul.list-folder
+					li.is-active
+						a(href="#") Все #[span 1]
+					li
+						a(href="") Folder #[span 7]
+					li
+						a(href="") Folder #[span 6]
+					li
+						a(href="") Folder
 
 		.container.container-flex
 
@@ -69,8 +90,8 @@ block main
 				.sidebar-category
 					.sidebar-scroll.nano
 						.nano-content
-							+itemMenu()
-							+itemMenuActive()
+							+itemMenu('file1.php')
+							+itemMenuActive('file2.php')
 							+itemMenu()
 							+itemMenu()
 							+itemMenu()
