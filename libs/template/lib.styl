@@ -1,0 +1,90 @@
+trn($time)
+	transition all $time ease-out
+
+brr($rad)
+	border-radius: $rad
+
+tt($Xposition, $Yposition)
+	transform translate($Xposition, $Yposition)
+
+imgC()
+	top 50%
+	left 50%
+	tt(-50%, -50%)	
+
+mt()
+	margin-top: arguments
+mb()
+	margin-bottom: arguments
+mr()
+	margin-right: arguments
+ml()
+	margin-left: arguments
+
+pt()
+	padding-top: arguments
+pb()
+	padding-bottom: arguments
+pr()
+	padding-right: arguments
+pl()
+	padding-left: arguments
+
+bt()
+	border-top: arguments
+bb()
+	border-bottom: arguments
+br()
+	border-right: arguments
+bl()
+	border-left: arguments
+
+icon($name)
+	background-image: url("../icons/"$name)
+	size: width($name) height($name)
+iconB($name)
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		icon($name)
+iconA($name)
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		icon($name)
+
+baa()
+	position: relative
+	&:before
+	&:after
+		content: ''
+		position: absolute
+
+ls()
+	letter-spacing: (arguments / 1000)em
+
+lh()
+	line-height: arguments
+
+fz()
+	font-size: arguments
+
+ffa()
+	font-family: arguments
+
+fw()
+	font-weight: arguments
+
+txtd()
+	text-decoration: arguments
+
+txta()
+	text-align: arguments
+
+txtt()
+	text-transform: arguments
+
+c()
+	color: arguments

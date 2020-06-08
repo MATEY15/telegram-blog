@@ -1,0 +1,73 @@
+@import ("../../libs/template/reset.css")
+@import ("../../libs/template/lib")
+@import ("../../libs/template/media")
+
+@import ("libs/*.css")
+@import ("fonts")
+@import ("blocks/**/**")
+
+*
+	box-sizing border-box
+
+html
+	height 100%
+
+body
+	position relative
+	overflow-x: hidden
+	min-width 320px
+	background: #f1f1f1
+	font-family: Tahoma,sans-serif,Arial,Helvetica
+	font-size 14px
+	min-height 100%
+	&.overflow
+		overflow hidden
+
+#overlayer
+	width 100%
+	height 100%
+	position fixed
+	top 0
+	left 0
+	z-index 11
+	background cBlack
+
+.hidden
+	display none
+
+.align-center
+	display block
+	margin 0 auto
+.align-right
+	display block
+	float right
+.align-left
+	display block
+	float left
+
+h1, h2, h3, h4, h5, h6
+	font-weight 700
+
+h1
+	font-size 32px
+h2
+	font-size 28px
+h3
+	font-size 26px
+h4
+	font-size 22px
+h5
+	font-size 18px
+h6
+	font-size 16px
+
+.container
+	box-sizing border-box
+	max-width 1000px
+	width 100%
+	margin 0 auto
+	
+.icon-search
+	width 16px
+	height 16px
+	fill #fff

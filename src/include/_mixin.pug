@@ -1,0 +1,41 @@
+mixin menuList(links)
+	ul
+		for i in links
+			li
+				a(href=i.link)=i.name
+
+mixin headingH2(name, desc)
+	.heading-content
+		h2= name
+		p= desc
+
+mixin button(name)
+	button.button-more
+		=name
+		svg(width="41" height="8" viewBox="0 0 41 8").icon-more
+			use(xlink:href="img/icon/sprite.svg#icon-more")
+
+mixin iconSvg(w, h, wp, id)
+	svg(width=w height=h viewBox=wp class=id)
+		use(xlink:href="img/icon/sprite.svg#"+id)
+
+
+mixin itemMenu()
+	a(href="#").category-items
+		.category-item--images
+			img(src="img/post-img.jpg", alt="")
+		.category-item--content
+			.category-item--content-head
+				h5 Тестовая категория
+				span.date 05.06.20
+			p Новая версия приложения в Google Play поддерживает опросы, отложенные сообщения и напоминания
+
+mixin itemMenuActive()
+	a(href="#").category-items.is-active
+		.category-item--images
+			img(src="img/post-img.jpg", alt="")
+		.category-item--content
+			.category-item--content-head
+				h5 Тестовая категория
+				span.date 05.06.20
+			p Новая версия приложения в Google Play поддерживает опросы, отложенные сообщения и напоминания
