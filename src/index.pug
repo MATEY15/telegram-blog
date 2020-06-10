@@ -35,6 +35,30 @@ block header
 				li
 					a(href="") Folder End
 
+	.mobile-search
+		.mobile-search--head
+			a(href="#").back-search
+				+iconSvg('133', '241', '0 0 133 241', 'icon-back')
+			form(action="")
+				input(type="text" placeholder="Search").aside-search
+		.mobile-search--footer
+			p Result
+
+	.overlay--mobile-menu
+	.mobile-menu
+		h5 Title
+		ul.mobile-menu--list
+			li
+				a(href="#") Item list 1
+			li
+				a(href="#") Item list 2
+			li
+				a(href="#") Item list 3
+			li
+				a(href="#") Item list 4
+			li
+				a(href="#") Item list 5
+
 
 block main
 	main.section_main
@@ -79,7 +103,7 @@ block main
 						input(type="text" placeholder="Поиск").aside-search
 				.sidebar-category
 					.sidebar-scroll.nano
-						.nano-content
+						.nano-content.stopss
 							+itemMenu()
 							+itemMenu()
 							+itemMenu()

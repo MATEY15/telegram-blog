@@ -23,6 +23,7 @@
 
 .contents-mobile
 	position relative
+	display none
 	height 0
 	overflow hidden
 	trn(.2s)
@@ -62,16 +63,20 @@
 
 
 .close-content--wrapper
-	position absolute
+	position relative
 	bottom 0
 	left 0
-	width 100%
-	background: #fff
-	border-bottom 1px solid #54C3F3
+	width 10px
+	background: #f1f1f1
+	border-left 1px solid #f1f1f1
 	padding 6px 10px 8px
 	text-align right
 	.close-content
-		position relative
+		position absolute
+		top 0
+		left 0
+		padding-top 15px
+		height 100%
 		color #222
 		font-size 16px
 		text-decoration none
@@ -82,4 +87,4 @@
 			fill #222
 			width 16px
 			height 16px
-			transform: rotate(90deg)
+			// transform: rotate(90deg)

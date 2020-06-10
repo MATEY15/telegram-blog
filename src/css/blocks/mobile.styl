@@ -7,12 +7,15 @@
 		// float none
 
 @media screen and (max-width: 767px)
+	
+	.mobile-search
+		display block
 
 	.mobile-header
 		display flex
 
 	.content-center,
-	.left-sidebar .nano
+	.left-sidebar .sidebar-scroll.nano
 		height: calc(100vh - 137px)
 
 	.section_main
@@ -34,11 +37,20 @@
 
 
 @media screen and (max-width: 639px)
+	
+	.sidebar-aside
+		display none
+	
+	.left-sidebar .sidebar-scroll.nano
+		height: calc(100vh - 75px)
 
 	.contents-mobile
-		max-height 480px
+		display flex
+		&.open
+			height: calc(100vh - 132px)
 		.content-center
-			max-width 480px
+			// max-width 480px
+			height calc(100vh - 137px)
 
 	.left-sidebar
 		max-width 100%
